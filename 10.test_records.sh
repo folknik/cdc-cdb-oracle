@@ -26,7 +26,7 @@ EOF
 }
 
 
-sql /opt/sql/14.test_records.sql
+sql /opt/sql/test.sql
 
 
 echo "- all OK"
