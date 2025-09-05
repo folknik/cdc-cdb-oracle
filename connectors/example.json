@@ -1,0 +1,37 @@
+{
+    "name": "oracle-source-connector-v1",
+    "connector.class": "io.debezium.connector.oracle.OracleConnector",
+    "tasks.max": "1",
+
+    "database.connection.adapter": "olr",
+    "database.hostname": "oracle",
+    "database.port": "1521",
+    "database.user": "c##dbzuser",
+    "database.password": "dbz",
+    "database.dbname": "XE",
+    "database.pdb.name" : "XEPDB1",
+
+    "openlogreplicator.host": "openlogreplicator",
+    "openlogreplicator.port": "9070",
+    "openlogreplicator.source": "ORA1",
+
+    "snapshot.fetch.size": "2000",
+    "snapshot.mode": "initial",
+
+    "topic.prefix": "ORACLE_CDC",
+    "schema.include.list": "USR1",
+
+    "include.schema.changes": "false",
+    "schema.history.internal.kafka.topic": "SCHEMA-CHANGES.ORACLE_CDC_V1",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka:29092",
+    "schema.history.internal.kafka.partitions": "1",
+    "schema.history.internal.kafka.replication.factor": "1",
+
+    "heartbeat.interval.ms": "10000",
+    "heartbeat.topics.prefix": "__debezium-heartbeat",
+
+    "auto.create.topics.enable": "true",
+    "topic.creation.default.cleanup.policy": "delete",
+    "topic.creation.default.partitions": "1",
+    "topic.creation.default.replication.factor": "1"
+}

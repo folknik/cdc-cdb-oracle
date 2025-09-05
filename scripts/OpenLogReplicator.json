@@ -1,0 +1,30 @@
+{
+  "version": "1.8.6",
+  "log-level": 4,
+  "source": [
+    {
+      "alias": "S1",
+      "name": "ORA1",
+      "reader": {
+        "type": "online",
+        "path-mapping": ["/opt/oracle/oradata", "/opt/oradata", "/opt/oracle/fra", "/opt/fra"],
+        "user": "c##dbzuser",
+        "password": "dbz",
+        "server": "//oracle:1521/XEPDB1"
+      },
+      "format": {
+        "type": "protobuf"
+      }
+    }
+  ],
+  "target": [
+    {
+      "alias": "T1",
+      "source": "S1",
+      "writer": {
+        "type": "network",
+        "uri": "0.0.0.0:9070"
+      }
+    }
+  ]
+}
