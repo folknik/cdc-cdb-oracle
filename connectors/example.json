@@ -9,7 +9,6 @@
     "database.user": "c##dbzuser",
     "database.password": "dbz",
     "database.dbname": "XE",
-    "database.pdb.name" : "XEPDB1",
 
     "openlogreplicator.host": "openlogreplicator",
     "openlogreplicator.port": "9070",

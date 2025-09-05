@@ -26,7 +26,7 @@ EOF
 }
 
 
-sql /opt/sql/9.xe_setup.sql
+sql /opt/sql/schema.sql
 
 
 echo "- all OK"
